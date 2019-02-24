@@ -18,6 +18,7 @@
         require_once 'pdoConnexion.php';
         require_once 'navbar.html';
 
+
         $email = $_SESSION['email'];
         $requet = "select * from parents where Email = '$email'";
         $resultats = $dbh->query($requet);
@@ -113,52 +114,54 @@
                         } else {
 
 
-                            echo("<li class=\"list-group-item\">$value</li>");
-                            echo("</ul>");
-                            /* echo("<div>");
-                              echo("<ul class='list-unstyled'>");
-                              echo("<li>$key : $value</li>");
-                              echo("</ul>");
-                              echo("</div>"); */
-                            continue;
-                        }
-                    }
-                }
-            } else {
-                echo("<p>Vide!</p>");
-                echo("Cliquer le lien \"Modifier la cherche\" pour le chercher");
-            }
-          
-            ?>
 
-            <div class="row">
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="image/dis.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Modification</h2>
-                    <p><a class="btn btn-secondary" href="parentCherche.php" role="button">Aller &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="image/nounou.jpg" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Nounous</h2>
-                    <p><a class="btn btn-secondary" href="nounouBon.php" role="button">Aller &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="image/panier.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Commandes</h2>
-                    <p><a class="btn btn-secondary" href="commandeEffectue.php" role="button">Aller &raquo;</a></p>
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
-        </div>
-            <!-- 
-            <div>
-            <a href="parentCherche.php">Modifier la cherche</a>
-            </div>
-            <div>
-            <a href="nounouBon.php">Voir les nounous je cherche</a>
-            </div>
-            <div>
-            <a href='commandeEffectue.php'>Mes commandes</a>
-            </div>
-            -->
-    </body>
+echo("<li class=\"list-group-item\">$value</li>");
+echo("</ul>");
+/* echo("<div>");
+echo("<ul class='list-unstyled'>");
+echo("<li>$key : $value</li>");
+echo("</ul>");
+echo("</div>"); */
+continue;
+}
+}
+}
+} else {
+echo("<p>Vide!</p>");
+echo("Cliquer le lien \"Modifier la cherche\" pour le chercher");
+}
+
+?>
+
+<div class="row">
+<div class="col-lg-4">
+<img class="rounded-circle" src="image/dis.png" alt="Generic placeholder image" width="140" height="140">
+<h2>Modification</h2>
+<p><a class="btn btn-secondary" href="parentCherche.php" role="button">Aller &raquo;</a></p>
+</div><!-- /.col-lg-4 -->
+<div class="col-lg-4">
+<img class="rounded-circle" src="image/nounou.jpg" alt="Generic placeholder image" width="140" height="140">
+<h2>Nounous</h2>
+<p><a class="btn btn-secondary" href="nounouBon.php" role="button">Aller &raquo;</a></p>
+</div><!-- /.col-lg-4 -->
+<div class="col-lg-4">
+<img class="rounded-circle" src="image/panier.png" alt="Generic placeholder image" width="140" height="140">
+<h2>Commandes</h2>
+<p><a class="btn btn-secondary" href="commandeEffectue.php" role="button">Aller &raquo;</a></p>
+</div><!-- /.col-lg-4 -->
+</div><!-- /.row -->
+</div>
+<!-- 
+<div>
+<a href="parentCherche.php">Modifier la cherche</a>
+</div>
+<div>
+<a href="nounouBon.php">Voir les nounous je cherche</a>
+</div>
+<div>
+<a href='commandeEffectue.php'>Mes commandes</a>
+</div>
+-->
+</body>
+
 </html>
